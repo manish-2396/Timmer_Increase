@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import "../componets/stopStyle.css"
 
-const Stopwatch = () => {
+const Stopwatch = (props) => {
 
     const [timerId ,setTimerId] = useState(null)
-    const [watch ,setWatch ] = useState(0);
+    const [watch ,setWatch ] = useState(props.second);
 
     const start =() => {
         if(!timerId){
@@ -25,9 +26,9 @@ const Stopwatch = () => {
         setTimerId(null)
     }
   return (
-    <div>
-      StopWatch
-      <div>{watch} sec</div>
+    <div id="timmer">
+      <div>StopWatch</div>
+      <div> <snap>{watch}</snap> sec</div>
       <div>
           <button onClick={start}>Start</button>
           <button onClick={pause}>Pause</button>

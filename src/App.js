@@ -3,7 +3,7 @@ import Stop from './componets/Stopwatch'
 function App() {
   return (
     <div className="App">
-      <Stop/>
+      <Stop second={0}/>
     </div>
   );
 }
